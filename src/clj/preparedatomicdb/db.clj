@@ -9,7 +9,7 @@
 (defn now [] (new java.util.Date))
 
 ;;; Here you have to point exactly to the path of your datastore
-(def persist-atom (durable-atom "/home/debtao/Datastore/glue27wells.dat"))
+(def persist-atom (durable-atom "/home/appsmith/Datastore/glue27wells.dat"))
 
 ;;;
 (defn getAllWells

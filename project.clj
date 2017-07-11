@@ -4,14 +4,13 @@
                  [org.clojure/clojurescript "1.9.229"]
                  [reagent "0.6.1"]
                  [durable-atom "0.0.3"]
-                 [com.datomic/datomic-free "0.9.5390" :exclusions [commons-codec
-                                                                   com.google.guava/guava]]]
+                 [com.datomic/datomic-free "0.9.5390" :exclusions [com.google.guava/guava]]]
 
   :min-lein-version "2.5.3"
 
   :source-paths ["src/clj"]
 
-  :plugins [[lein-cljsbuild "1.1.4"]]
+  :plugins [[lein-cljsbuild "1.1.4" :exclusions [org.clojure/clojure]]]
 
   :clean-targets ^{:protect false} ["resources/public/js"
                                     "target"]
@@ -22,7 +21,7 @@
   {:dev
    {:dependencies []
 
-    :plugins      [[lein-figwheel "0.5.10"]]
+    :plugins      [[lein-figwheel "0.5.10" :exclusions [org.clojure/clojure]]]
     }}
 
   :cljsbuild
