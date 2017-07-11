@@ -1,7 +1,11 @@
 (defproject preparedatomicdb "0.1.0-SNAPSHOT"
+  :main preparedatomicdb.core
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.229"]
-                 [reagent "0.6.1"]]
+                 [reagent "0.6.1"]
+                 [durable-atom "0.0.3"]
+                 [com.datomic/datomic-free "0.9.5390" :exclusions [commons-codec
+                                                                   com.google.guava/guava]]]
 
   :min-lein-version "2.5.3"
 
